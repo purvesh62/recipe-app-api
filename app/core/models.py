@@ -4,7 +4,7 @@ Database models
 
 from django.db import models
 from django.contrib.auth.models import (
-    AbstractUser,  # Provides functionality for the authentication system.
+    AbstractBaseUser,  # Provides functionality for the authentication system.
     BaseUserManager,  # A base user manager class provided by Django.
     PermissionsMixin  # Provides functionality for the permissions and fields system.
 )
@@ -22,7 +22,7 @@ class UserManager(BaseUserManager):
         return user
 
 
-class User(AbstractUser, PermissionsMixin):
+class User(AbstractBaseUser, PermissionsMixin):
     """User model"""
     email = models.EmailField(max_length=255, unique=True)
     name = models.CharField(max_length=255)
