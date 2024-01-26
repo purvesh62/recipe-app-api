@@ -1,13 +1,11 @@
 # Git
 .git
 .gitignore
-README.md
 
 # Docker
 .docker
 
 # Python
-**/.idea
 app/__pycache__/
 app/*/__pycache__/
 app/*/*/__pycache__/
