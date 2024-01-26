@@ -4,13 +4,13 @@ LABEL maintainer="purvesh.me"
 
 # This is recommended when running app on Docker
 # the console output doesn't get buffered.
-ENV PYTHONBUFFERED 1
+ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements.txt /tmp/requirements.txt
 
 COPY ./requirements.dev.txt /tmp/requirements.dev.txt
 
-COPY ./ /app
+COPY ./app /app
 
 WORKDIR /app
 
